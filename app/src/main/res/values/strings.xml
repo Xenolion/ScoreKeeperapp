@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Score Keeper app</string>
+    <string name="period">Period</string>
+    <string name="time">Timer</string>
+    <string name="point">0</string>
+    <string name="plus">+</string>
+    <string name="start">start</string>
+    <string name="pause">pause</string>
+    <string name="resume">resume</string>
+    <string name="cancel">cancel</string>
+    <string name="reset">reset</string>
+    <string name="threePoint">+3 Point</string>
+    <string name="twoPoint">+2 Point</string>
+    <string name="onePoint">Free Throw</string>
+    <string name="foulPoint">Team Foul</string>
+</resources>
