@@ -41,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
     private boolean isPaused = false;
     private boolean isCanceled = false;
     private long remainingTime = 0;
+   
 
     @Override
     public void onSaveInstanceState(Bundle savedInstanceState) {
@@ -219,13 +220,19 @@ public class MainActivity extends AppCompatActivity {
 
     public void onePointForTeamA(View v) {
         if (foulCounterA == 5) {
-            v.setEnabled(true);
             scoreTeamA = scoreTeamA + 1;
+            //Just change your background to a certain colour or something because disabling them its a huge process and hard logic
+            v.setBackgroundColor(Color.RED);
             scoreOnePointTeamA = scoreOnePointTeamA + 1;
             displayForTeamA(scoreTeamA);
             displayForTeamAOnePoint(scoreOnePointTeamA);
         }
-        else v.setEnabled(false);
+        else{
+           //Lets change a background colour so the button looks as if is disabled but it is not!
+           v.setBackgroundColor(Color.GREEN);
+            Toast.makeText(MainActivity.this,"Not yet 5",Toast.LENGTH_SHORT).show();
+
+        }
     }
 
     public void foulCountForTeamA(View v) {
