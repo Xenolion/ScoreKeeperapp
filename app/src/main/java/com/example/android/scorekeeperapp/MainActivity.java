@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.ToggleButton;
+
 import java.text.DecimalFormat;
 
 public class MainActivity extends AppCompatActivity {
@@ -200,8 +201,6 @@ public class MainActivity extends AppCompatActivity {
                 displayForTeamBFoul(foulCounterB);
             }
         });
-
-
     }
 
     public void threePointForTeamA(View v) {
@@ -227,37 +226,9 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-
-    //Button clickButton = (Button) findViewById(R.id.freeThrowTeamA);
-    //clickButton.setOnClickListener( new OnClickListener() {
-
-      //  @Override
-      // public void onClick(View v) {
-       // }
-    // });
-
-
-   // public class MyActivity extends Activity {
-   //     protected void onCreate(Bundle savedInstanceState) {
-   //         super.onCreate(savedInstanceState);
-
-//            setContentView(R.layout.activity_main);
-
-  //          final Button button = findViewById(R.id.freeThrowTeamA);
-    //        button.setOnClickListener(new View.OnClickListener() {
-      //          public void onClick(View v) {
-        //            if (foulCounterA == 5)
-          //              button.setEnabled(true);
-            //        else
-              //          button.setEnabled(false);
-               // }
-            //});
-     //   }
-    //}
-
     public void foulCountForTeamA(View v) {
         if (foulCounterA < 5)
-        foulCounterA = foulCounterA + 1;
+            foulCounterA = foulCounterA + 1;
 
         else
             foulCounterA = 5;
@@ -280,9 +251,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onePointForTeamB(View v) {
-        boolean condition = (foulCounterA == 5);
-        v.setEnabled(condition);
-
         if (foulCounterB == 5) {
             scoreTeamB = scoreTeamB + 1;
             scoreOnePointTeamB = scoreOnePointTeamB + 1;
