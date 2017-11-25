@@ -219,17 +219,18 @@ public class MainActivity extends AppCompatActivity {
 
     public void onePointForTeamA(View v) {
         if (foulCounterA == 5) {
+            v.setEnabled(true);
             scoreTeamA = scoreTeamA + 1;
             scoreOnePointTeamA = scoreOnePointTeamA + 1;
             displayForTeamA(scoreTeamA);
             displayForTeamAOnePoint(scoreOnePointTeamA);
         }
+        else v.setEnabled(false);
     }
 
     public void foulCountForTeamA(View v) {
         if (foulCounterA < 5)
             foulCounterA = foulCounterA + 1;
-
         else
             foulCounterA = 5;
 
